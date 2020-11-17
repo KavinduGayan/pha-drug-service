@@ -22,7 +22,7 @@ public class Drug {
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "drug_dealer_id")
     private DrugDealer drugDealer;
     @Column(name = "pharmacy_id")
